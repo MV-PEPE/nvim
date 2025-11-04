@@ -6,3 +6,6 @@ vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left toggle<CR>', {
 -- Map Ctrl-P to open the file finder
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+
+-- Map Shift-k to display documentation in a floating window
+vim.keymap.set('n', '<S-k>', vim.lsp.buf.hover, {})
