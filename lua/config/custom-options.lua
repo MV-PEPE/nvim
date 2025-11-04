@@ -7,3 +7,6 @@ vim.cmd("set expandtab")
 
 -- Show relative line numbers together with the actual current line number
 vim.cmd("set number relativenumber")
+
+-- Make LSP errors show up
+vim.diagnostic.config({ virtual_text = true, virtual_lines = { current_line = true }, })
