@@ -1,3 +1,4 @@
 vim.lsp.enable({
-    "rust_ls"
+    "rust_ls",
+    "lua_ls"
 })
