@@ -1,4 +1,4 @@
--- Map Space-e to focus/unfocus on the file tree
+-- Map Shift-e to focus/unfocus on the file tree
 vim.keymap.set('n', '<S-e>', ':Neotree<CR>', {})
 -- Map Space-n to open/close the file tree on the left
 vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left toggle<CR>', {})
