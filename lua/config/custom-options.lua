@@ -11,7 +11,7 @@ vim.o.relativenumber = true
 
 -- Sync clipboard between OS and Neovim
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+    vim.o.clipboard = 'unnamedplus'
 end)
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
@@ -31,15 +31,17 @@ vim.o.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
 
+-- Make suggestion windows rounded
+vim.o.winborder = "rounded"
+
 -- Make LSP errors show up
 vim.diagnostic.config({ virtual_text = true, virtual_lines = { current_line = true }, })
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.hl.on_yank()
-  end,
+    desc = 'Highlight when yanking (copying) text',
+    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+    callback = function()
+        vim.hl.on_yank()
+    end,
 })
-
