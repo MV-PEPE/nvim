@@ -28,3 +28,6 @@ vim.keymap.set('n', '<N>', '<Nzz>', { remap = true })
 
 -- Map Space-l-f to format current buffer
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {})
+
+-- Map Space-w to write buffer
+vim.keymap.set('n', '<leader>w', ':write<CR>')
