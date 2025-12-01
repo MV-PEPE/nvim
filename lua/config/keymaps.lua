@@ -15,3 +15,16 @@ vim.keymap.set('n', '<F12>', vim.lsp.buf.definition, {})
 
 -- Map code actions to Space-ca
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+
+-- Map Ctrl-u to also center the current buffer
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { remap = true })
+
+-- Map Ctrl-d to also center the current buffer
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { remap = true })
+
+-- Center the current buffer on search
+vim.keymap.set('n', '<n>', '<nzz>', {})
+vim.keymap.set('n', '<N>', '<Nzz>', { remap = true })
+
+-- Map Space-l-f to format current buffer
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {})
