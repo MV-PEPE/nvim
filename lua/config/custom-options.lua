@@ -34,6 +34,9 @@ vim.o.scrolloff = 10
 -- Make suggestion windows rounded
 vim.o.winborder = "rounded"
 
+-- Make text lines longer than the width of the window display on the same line
+vim.o.wrap = false
+
 -- Make LSP errors show up
 vim.diagnostic.config({ virtual_text = true, virtual_lines = { current_line = true }, })
 
