@@ -34,3 +34,6 @@ vim.keymap.set('n', '<leader>w', ':write<CR>')
 
 -- Map Space-q to quit buffer
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
+
+-- Map Space-h to start up help
+vim.keymap.set('n', '<leader>h', ':help ')
