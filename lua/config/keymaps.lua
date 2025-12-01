@@ -31,3 +31,6 @@ vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {})
 
 -- Map Space-w to write buffer
 vim.keymap.set('n', '<leader>w', ':write<CR>')
+
+-- Map Space-q to quit buffer
+vim.keymap.set('n', '<leader>q', ':quit<CR>')
