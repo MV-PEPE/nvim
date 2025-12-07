@@ -3,9 +3,14 @@ vim.keymap.set('n', '<S-e>', ':Neotree<CR>', {})
 -- Map Space-n to open/close the file tree on the left
 vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left toggle<CR>', {})
 
+-- Telescope mappings
 -- Map Space-f to open the file finder
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
+-- Map Space-s-. to show recent files
+vim.keymap.set('n', '<leader>s.', builtin.oldfiles)
+-- Map Space-f-g to search for phrase
+vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 
 -- Map Shift-k to display documentation in a floating window
 vim.keymap.set('n', '<S-k>', vim.lsp.buf.hover, {})
