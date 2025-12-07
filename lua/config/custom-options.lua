@@ -37,6 +37,9 @@ vim.o.winborder = "rounded"
 -- Make text lines longer than the width of the window display on the same line
 vim.o.wrap = false
 
+-- Set highlight on search, but clear on pressing Esc in normal mode (in keymaps.lua)
+vim.o.hlsearch = true
+
 -- Make LSP errors show up
 vim.diagnostic.config({ virtual_text = true, virtual_lines = { current_line = true }, })
 
