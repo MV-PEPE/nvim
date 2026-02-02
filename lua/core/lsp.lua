@@ -10,6 +10,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
             --client.server_capabilities.completionProvider.triggerCharacters = chars
             vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
         end
+
+        vim.api.nvim_create_autocmd("BufWritePre", {
+        buffer = args.buf,
+        callback = function()
+            if client.supports_method("textDocument/formatting") then
+                vim.lsp.buf.format {async = false, id = args.data.client_id }
+            end
+        end,
+        })
     end,
 })
 
