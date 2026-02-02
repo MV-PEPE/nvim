@@ -35,7 +35,7 @@ vim.o.scrolloff = 10
 vim.o.winborder = "rounded"
 
 -- Make text lines longer than the width of the window display on the same line
-vim.o.wrap = false
+-- vim.o.wrap = false
 
 -- Set highlight on search, but clear on pressing Esc in normal mode (in keymaps.lua)
 vim.o.hlsearch = true
