@@ -41,7 +41,7 @@ vim.o.wrap = false
 vim.o.hlsearch = true
 
 -- Make LSP errors show up
-vim.diagnostic.config({ virtual_text = true, virtual_lines = { current_line = true }, })
+vim.diagnostic.config({ virtual_text = false, virtual_lines = { current_line = true }, })
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
