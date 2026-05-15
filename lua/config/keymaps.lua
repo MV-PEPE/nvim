@@ -4,9 +4,9 @@ vim.keymap.set('n', '<S-e>', ':Neotree<CR>', {})
 vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left toggle<CR>', {})
 
 -- Telescope mappings
--- Map Space-f to open the file finder
+-- Map Space-f-f to open the file finder
 local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<leader>f', builtin.find_files, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 -- Map Space-s-. to show recent files
 vim.keymap.set('n', '<leader>s.', builtin.oldfiles)
 -- Map Space-f-g to search for phrase
@@ -26,6 +26,10 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { remap = true })
 
 -- Map Ctrl-d to also center the current buffer
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { remap = true })
+
+-- Map { and } to also center the current buffer
+vim.keymap.set('n', '{', '{zz', { remap = true })
+vim.keymap.set('n', '}', '}zz', { remap = true })
 
 -- Center the current buffer on search
 vim.keymap.set('n', '<n>', '<nzz>', {})
